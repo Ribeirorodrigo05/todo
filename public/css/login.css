@@ -1,0 +1,126 @@
+*       {
+    margin: 0px;
+    padding:0px;
+}
+html    {
+    background-image: linear-gradient( 102.1deg,  rgba(96,221,142,1) 8.7%, rgba(24,138,141,1) 88.1% );
+}
+
+.container-login  {
+    display:grid;
+    min-height: 100vh;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'empty-left login empty-right';
+    font-family: 'Oswald', sans-serif;
+    
+
+}
+.login  {
+    grid-area: login;
+    height:80%;
+    width: 60%;
+    margin:auto;
+    color:#FFFF40;
+    border:2px solid #FFFF40; 
+    background:url('../img/bg-degrade.png'); 
+    border-radius: 30px;
+
+
+}
+
+.login-title        {
+    height:40%;
+    color: #faf9b9;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+}
+
+.form-login  {
+    height:50%;
+    
+}
+.title-form  {
+    margin-left: 10%;
+    font-size: 19px;
+    font-weight: 100px;
+}
+.user-input-login {
+    height:20%;
+    width:80%;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-login     {
+    padding: 10px;
+    background:#346751;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.input-login    {
+    padding: 15px;
+    width:100%;
+    border:2px solid #FFFF40;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline-color: #01937C;
+}
+.input-login::placeholder   {
+    color: #01937C;
+    font-size: 14px;
+ }
+
+ .button-login  {
+    padding:25px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn-login      {
+    padding:15px 30px;
+    background:#346751;
+    border: none;
+    color: #FFFF40;
+    font-size: 15px;
+}
+
+.link-login {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-register{
+    color:#FFFFFF
+}
+
+
+@media (max-width:1024px){
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+    .container-login  {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'login';
+        background:url('../img/bg-degrade.png');    
+    }
+
+    .login  {
+        grid-area: login;
+        height:95%;
+        width: 92%;
+         }
+
+    .login-title        {
+        font-size: 8vw;
+    }   
+}
+

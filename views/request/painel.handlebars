@@ -1,0 +1,26 @@
+<div class="container-painel" id="painel">
+    <header class="header">
+        <form action="/task" method='POST' class="task" id="task">
+            <div class="label-task">
+                <p>Title</p>
+            </div>
+
+            <div class="Task">
+                <input type="text" name="task" id="">
+            </div>
+
+            <div class="btn">
+                <button type="submit">Salvar</button>
+            </div>
+
+        </form>
+    </header>
+
+    {{#each user}}
+    <div>Tarefa</div>
+    <div>{{task}}</div>
+    <a href="/delete/{{_id}}" class="table-link">
+        <buttonclass="table-btn">delete </button>
+    </a>
+    {{/each}}
+</div>
