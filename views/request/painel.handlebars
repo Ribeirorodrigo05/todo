@@ -1,26 +1,31 @@
 <div class="container-painel" id="painel">
     <header class="header">
-        <form action="/task" method='POST' class="task" id="task">
-            <div class="label-task">
-                <p>Title</p>
-            </div>
+            <div class="header-formation">
+        <div class="label-task">
+                <p>Title:</p>
+        </div>
 
-            <div class="Task">
-                <input type="text" name="task" id="">
+        <form action="/task" method='POST'>
+             <div class="service">
+                <input type="text" name="task" id="task" placeholder="Task...">
             </div>
 
             <div class="btn">
-                <button type="submit">Salvar</button>
+                <button type="submit" class='btn-submit'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="" class=" icon-send" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg></button>
             </div>
 
         </form>
+        </div>
     </header>
 
     {{#each user}}
-    <div>Tarefa</div>
-    <div>{{task}}</div>
+    
+    <div>{{task}}
     <a href="/delete/{{_id}}" class="table-link">
         <buttonclass="table-btn">delete </button>
     </a>
+    </div>
     {{/each}}
 </div>
