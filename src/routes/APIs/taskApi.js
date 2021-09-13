@@ -37,13 +37,11 @@ router.get('/painel',csrfProtection,auth,(req,res)=>{
     const { userID } = req;
 
     Assignment.find({user: userID}).then(user => {
-        
+        Assignment.find({done:true}).then(isDone =>{
+            res.render('request/painel',{user : user ,isDone : isDone})
+        })
             
-            if(user){
-                res.render('request/painel',{user : user})
-            }else{
-                res.render('request/painel')
-            }
+          
        
         })
 
@@ -65,6 +63,13 @@ router.post('/task',auth,(req,res)=>{
             .catch(err => console.log(err))
         })
     
+})
+
+router.post('/edit', auth,(req,res)=>{
+   Assignment.findOne({_id:req.body.id}).then(task =>{
+       task.done = true
+   }).save()
+   .then(()=> res.redirect('/painel'))
 })
 
 router.get('/delete/:id', csrfProtection,auth, (req,res)=>{

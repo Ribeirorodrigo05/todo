@@ -9,6 +9,10 @@ const assignmentSchema = new Schema({
         type:String,
         Require:true
     },
+    done:{
+        type:Boolean,
+        default:false
+    },
     created_at:{
         type:Date,
         default:Date.now

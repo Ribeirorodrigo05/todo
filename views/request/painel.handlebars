@@ -11,7 +11,7 @@
             </div>
 
             <div class="btn">
-                <button type="submit" class='btn-submit'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="" class=" icon-send" viewBox="0 0 16 16">
+                <button type="submit" class='btn-submit'><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFFF40" class=" icon-send" viewBox="0 0 16 16">
   <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
 </svg></button>
             </div>
@@ -20,12 +20,43 @@
         </div>
     </header>
 
+    <main class="main">
     {{#each user}}
     
-    <div>{{task}}
-    <a href="/delete/{{_id}}" class="table-link">
-        <buttonclass="table-btn">delete </button>
-    </a>
+    <div class='task-list'>
+
+        <div class="input-select task-formation">
+        <input type="checkbox" name="select" id="select" class="select" onclick="strikethrough()">
+        </div>
+
+        <div class="task-span task-formation">
+        <span class='task-item'>{{task}}</span>
+        </div>
+        <input type="hidden" name="id" value={{user._id}}>
+         <div class="task-delete task-formation">
+            <form action="/edit" method="post">
+            <input type="hidden" name="id" value={{_id}}>
+            <button ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#28DF99" class="bi bi-journal-check" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+</svg> </button>
+            </form>
+        </div>
+       
+        <div class="task-delete task-formation">
+            <a href="/delete/{{_id}}" class="task-delete-link">
+                <buttonclass="table-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+  <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+  <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+</svg>
+                </button>
+            </a>
+        </div>
+
     </div>
     {{/each}}
+
+    </main>
 </div>
