@@ -5,6 +5,7 @@
 .container-register  {
     display:grid;
     min-height: 100vh;
+    
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 1fr;
     grid-template-areas: 'empty-left register empty-right';
@@ -14,7 +15,7 @@
 .register  {
     grid-area: register;
     height:80%;
-    width: 60%;
+    max-width: 850px;
     margin:auto;
     color:#FFFF40;
     border:2px solid #FFFF40; 

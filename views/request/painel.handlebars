@@ -7,7 +7,7 @@
 
         <form action="/task" method='POST'>
              <div class="service">
-                <input type="text" name="task" id="task" placeholder="Task...">
+                <input type="text" name="task" id="task" placeholder="Task..." required>
             </div>
 
             <div class="btn">
@@ -21,7 +21,9 @@
     </header>
 
     <main class="main">
-    
+    <div class="task-done">
+        To do:
+    </div>
     {{#each notDone}}
     
     <div class='task-list'>

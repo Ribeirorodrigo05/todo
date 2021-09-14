@@ -2,9 +2,7 @@
     margin: 0px;
     padding:0px;
 }
-html    {
-    background-image: linear-gradient( 102.1deg,  rgba(96,221,142,1) 8.7%, rgba(24,138,141,1) 88.1% );
-}
+
 
 .container-login  {
     display:grid;
