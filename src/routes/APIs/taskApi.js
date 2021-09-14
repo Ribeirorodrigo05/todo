@@ -37,8 +37,8 @@ router.get('/painel',csrfProtection,auth,(req,res)=>{
     const { userID } = req;
 
     Assignment.find({user: userID}).then(user => {
-        Assignment.find({done:true}).then(isDone =>{
-            Assignment.find({done:false}).then(notDone => {
+        Assignment.find({user: userID, done:true}).then(isDone =>{
+            Assignment.find({user: userID, done:false}).then(notDone => {
                 res.render('request/painel',{ isDone : isDone, notDone : notDone})
             })
             
@@ -48,7 +48,7 @@ router.get('/painel',csrfProtection,auth,(req,res)=>{
        
         })
 
-    })
+    }) 
 router.post('/task',auth,(req,res)=>{
     const {userID} = req;
 
