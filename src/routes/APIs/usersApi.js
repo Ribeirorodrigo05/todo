@@ -10,7 +10,6 @@ const csrfProtection = csurf({cookie: {httpOnly: true}});
 
 //model requered
 const User = require('../../../model/User')
-const Assignment = require('../../../model/Assignment')
 const key = require('../../../config/keys')
 const validateRegisterInput = require('../../../validation/register')
 const validateLoginInput = require('../../../validation/login')
