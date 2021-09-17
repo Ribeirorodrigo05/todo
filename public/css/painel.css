@@ -86,6 +86,9 @@
             border: none;
             background-color: #188a8d;
         }
+        .btn-icon {
+            cursor: pointer;
+        }
          
         .main {
             grid-area:task;
