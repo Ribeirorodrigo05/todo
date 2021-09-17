@@ -5,7 +5,6 @@
 .container-register  {
     display:grid;
     min-height: 100vh;
-    
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 1fr;
     grid-template-areas: 'empty-left register empty-right';
@@ -14,13 +13,15 @@
 }
 .register  {
     grid-area: register;
-    height:80%;
-    max-width: 850px;
+    height:90%;
+    width: 60%;
     margin:auto;
     color:#FFFF40;
     border:2px solid #FFFF40; 
     background:url('../img/bg-degrade.png'); 
     border-radius: 30px;
+    box-shadow: 0px 0px 5px 4px #168059;
+
 
 
 }
@@ -93,29 +94,9 @@
 }
 
 
-@media (max-width:480px){
-    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
+@media (max-width: 481px){
     .container-register  {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: 'register';
-        background:url('../img/bg-degrade.png');    
-    }
-
-    .register  {
-        grid-area: register;
-        height:95%;
-        width: 92%;
-         }
-
-    .register-title        {
-        font-size: 8vw;
-    }   
-}
-
-@media (min-width: 481px) and (max-width:1024px) {
-    .container  {
         display:grid;
         min-height: 100vh;
         grid-template-columns: 1fr;
@@ -123,6 +104,19 @@
         grid-template-areas: 'register';
         background:url('../img/bg-degrade.png'); 
         font-family: 'Oswald', sans-serif;
+        }
+
+        .register  {
+            grid-area: register;
+            height:98%;
+            width: 98%;
+            margin:auto;
+            color:#FFFF40;
+            border:2px solid #FFFF40; 
+            background:url('../img/bg-degrade.png'); 
+            border-radius: 30px;
+        
+        
         }
 
 }
